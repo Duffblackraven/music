@@ -1,15 +1,17 @@
 .centerBlockFilter {
+    height: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 12px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 51px;
+    align-items: flex-end;
+    margin-bottom: 50px;
   }
   
   .centerBlockContent {
@@ -23,23 +25,10 @@
   }
 
   .filterTitle {
+    color:#fff;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     margin-right: 15px;
-  }
-  
-  .filterButton {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    border: 1px solid #ffffff;
-    border-radius: 60px;
-    padding: 6px 20px;
-  }
-  
-  .filterButton:not(:last-child) {
-    margin-right: 10px;
   }

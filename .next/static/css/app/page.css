@@ -1,11 +1,37 @@
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Main/Main.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-.Main_main__NTSgt {
-    flex: 1 1 auto;
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/BarVolume/BarVolume.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+.BarVolume_barVolume___EVsr {
+    width: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    padding: 0 92px 0 0;
+  }
+  .BarVolume_volumeContent__PRaFw {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .BarVolume_volumeImage__kLlV6 {
+    width: 13px;
+    height: 18px;
+    margin-right: 17px;
+  }
+  
+  .BarVolume_volumeSvg__sZ_3a {
+    width: 13px;
+    height: 18px;
+    fill: transparent;
+  }
+  
+  .BarVolume_volumeProgress__Ou5iI {
+    width: 109px;
+  }
+  
+  .BarVolume_volumeProgressLine__YSWbA {
+    width: 109px;
   }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Bar/Bar.module.css ***!
@@ -236,312 +262,6 @@
     width: 109px;
   }
   
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/BarVolume/BarVolume.module.css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************/
-.BarVolume_barVolume___EVsr {
-    width: auto;
-    display: flex;
-    align-items: center;
-    padding: 0 92px 0 0;
-  }
-  .BarVolume_volumeContent__PRaFw {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .BarVolume_volumeImage__kLlV6 {
-    width: 13px;
-    height: 18px;
-    margin-right: 17px;
-  }
-  
-  .BarVolume_volumeSvg__sZ_3a {
-    width: 13px;
-    height: 18px;
-    fill: transparent;
-  }
-  
-  .BarVolume_volumeProgress__Ou5iI {
-    width: 109px;
-  }
-  
-  .BarVolume_volumeProgressLine__YSWbA {
-    width: 109px;
-  }
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/CenterBlock/CenterBlock.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
-.CenterBlock_mainCenterBlock__4x7fS {
-    width: 100px;
-    flex-grow: 3;
-    padding: 20px 40px 20px 111px;
-  }
-
-  .CenterBlock_centerBlockSearch__vbeYH {
-    width: 100%;
-    border-bottom: 1px solid #4e4e4e;
-    margin-bottom: 51px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .CenterBlock_centerBlockH2__it2Va {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    letter-spacing: -0.8px;
-    margin-bottom: 45px;
-  }
-  
-  .CenterBlock_centerBlockFilter__0ex1i {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 51px;
-  }
-  
-  .CenterBlock_centerBlockContent__wlogo {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-  }
-
-  .CenterBlock_filterTitle__AJnf3 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 15px;
-  }
-  
-  .CenterBlock_filterButton__SVdz5 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    border: 1px solid #ffffff;
-    border-radius: 60px;
-    padding: 6px 20px;
-  }
-  
-  .CenterBlock_filterButton__SVdz5:not(:last-child) {
-    margin-right: 10px;
-  }
-  
-  .CenterBlock_playlistTitleCol__3Dk8U {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    color: #696969;
-    text-transform: uppercase;
-  }
-  
-  .CenterBlock_playlistTitleSvg__XzWDA {
-    width: 12px;
-    height: 12px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .CenterBlock_col01__Q6mcG {
-    width: 447px;
-  }
-  
-  .CenterBlock_col02__KKVtP {
-    width: 321px;
-  }
-  
-  .CenterBlock_col03__B0R39 {
-    width: 245px;
-  }
-  
-  .CenterBlock_col04___Y_f5 {
-    width: 60px;
-    text-align: end;}
-
-    .CenterBlock_contentTitle__XaxxE {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
-
-      .CenterBlock_searchText__5_xev {
-        flex-grow: 100;
-        background-color: transparent;
-        border: none;
-        padding: 13px 10px 14px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #ffffff;
-      }
-
-      .CenterBlock_searchSvg__JUoai {
-        width: 17px;
-        height: 17px;
-        margin-right: 5px;
-        stroke: #ffffff;
-        fill: transparent;
-      }
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ContentPlaylist/ContentPlaylist.module.css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
-.ContentPlaylist_playlist__kH4eQ {
-    height: 700px;
-    overflow-y: auto;
-    overflow-y: hidden;
-}
-.ContentPlaylist_playlist__kH4eQ::-webkit-scrollbar {
-   display: none;
-}
-
-.ContentPlaylist_contentPlaylist__g3gEg {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-  }
-  
-  .ContentPlaylist_playlistTitleCol___3R0X {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    color: #696969;
-    text-transform: uppercase;
-  }
-  
-  .ContentPlaylist_playlistTitleSvg__xElih {
-    width: 12px;
-    height: 12px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .ContentPlaylist_col01__Q0Ihz {
-    width: 447px;
-  }
-  
-  .ContentPlaylist_col02__05QoQ {
-    width: 321px;
-  }
-  
-  .ContentPlaylist_col03__2lzFc {
-    width: 245px;
-  }
-  
-  .ContentPlaylist_col04__W8bWr {
-    width: 60px;
-    text-align: end;
-  }
-  
-  .ContentPlaylist_playlistItem__2kdZd {
-    width: 100%;
-    display: block;
-    margin-bottom: 12px;
-  }
-  
-  .ContentPlaylist_playlistTrack__MW_nK {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .ContentPlaylist_trackTitle__2kINm {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 447px;
-  }
-  
-  .ContentPlaylist_trackTitleImage__br5cS {
-    width: 51px;
-    height: 51px;
-    padding: 16px;
-    background: #313131;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 17px;
-  }
-  
-  .ContentPlaylist_trackTitleSvg__rDtfu {
-    width: 18px;
-    height: 17px;
-    fill: transparent;
-    stroke: #4e4e4e;
-  }
-  
-  .ContentPlaylist_trackTitleLink__nx6An {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff;
-  }
-  
-  .ContentPlaylist_trackTitleSpan__Fx9cD {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4e4e4e;
-  }
-  
-  .ContentPlaylist_trackAuthor__krdT7 {
-    width: 321px;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .ContentPlaylist_trackAuthorLink__dv90E {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff;
-    text-align: left;
-  }
-  
-  .ContentPlaylist_trackAlbum__KK_Mk {
-    width: 245px;
-  }
-  
-  .ContentPlaylist_trackAlbumLink__BGPaN {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #696969;
-  }
-  
-  .ContentPlaylist_trackTimeSvg__EM9vB {
-    width: 14px;
-    height: 12px;
-    margin-right: 17px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .ContentPlaylist_trackTimeText__yR5m_ {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: right;
-    color: #696969;
-  }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/PlayListItem/PlayListItem.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
@@ -691,14 +411,255 @@
     text-align: right;
     color: #696969;
   }
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ContentPlaylist/ContentPlaylist.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.ContentPlaylist_playlist__kH4eQ {
+    height: 700px;
+    overflow-y: auto;
+    overflow-y: hidden;
+}
+.ContentPlaylist_playlist__kH4eQ::-webkit-scrollbar {
+   display: none;
+}
+
+.ContentPlaylist_contentPlaylist__g3gEg {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .ContentPlaylist_playlistTitleCol___3R0X {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+  }
+  
+  .ContentPlaylist_playlistTitleSvg__xElih {
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .ContentPlaylist_col01__Q0Ihz {
+    width: 447px;
+  }
+  
+  .ContentPlaylist_col02__05QoQ {
+    width: 321px;
+  }
+  
+  .ContentPlaylist_col03__2lzFc {
+    width: 245px;
+  }
+  
+  .ContentPlaylist_col04__W8bWr {
+    width: 60px;
+    text-align: end;
+  }
+  
+  .ContentPlaylist_playlistItem__2kdZd {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  .ContentPlaylist_playlistTrack__MW_nK {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ContentPlaylist_trackTitle__2kINm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 447px;
+  }
+  
+  .ContentPlaylist_trackTitleImage__br5cS {
+    width: 51px;
+    height: 51px;
+    padding: 16px;
+    background: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+  }
+  
+  .ContentPlaylist_trackTitleSvg__rDtfu {
+    width: 18px;
+    height: 17px;
+    fill: transparent;
+    stroke: #4e4e4e;
+  }
+  
+  .ContentPlaylist_trackTitleLink__nx6An {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  
+  .ContentPlaylist_trackTitleSpan__Fx9cD {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4e4e4e;
+  }
+  
+  .ContentPlaylist_trackAuthor__krdT7 {
+    width: 321px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .ContentPlaylist_trackAuthorLink__dv90E {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .ContentPlaylist_trackAlbum__KK_Mk {
+    width: 245px;
+  }
+  
+  .ContentPlaylist_trackAlbumLink__BGPaN {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #696969;
+  }
+  
+  .ContentPlaylist_trackTimeSvg__EM9vB {
+    width: 14px;
+    height: 12px;
+    margin-right: 17px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .ContentPlaylist_trackTimeText__yR5m_ {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #696969;
+  }
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/FilterBlockItem/FilterBlockItem.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.FilterBlockItem_filterButton__VstET {
+    color: #fff;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #ffffff;
+    border-radius: 60px;
+    padding: 6px 20px;
+    transition: 0.2s;
+    width: 140px;
+  }
+  .FilterBlockItem_filterButton__VstET:hover {
+    border-color: #AD61FF;
+    color: #AD61FF;
+  }
+  .FilterBlockItem_active__fo_ro {
+    color:#AD61FF;
+    border-color: #AD61FF;
+  }
+
+  .FilterBlockItem_filterBy__agniH {
+    display: block;
+    position: absolute;
+    background-color: #313131;
+    width: 220px;
+    max-height: 386px;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 15px;
+    z-index: 7;
+    box-sizing: content-box;
+    margin-top: 15px;
+  }
+  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar {
+    width: 4px;
+    margin-left: -20px;
+  }
+  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar-track {
+    background-color: #4B4949;
+  }
+  .FilterBlockItem_filterByP__gEZ70 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 8px;
+    list-style-type: none;
+  }
+
+  .FilterBlockItem_CountPopUp__LJyZH {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    position: relative;
+    top: 14px;
+    left: 115px;
+
+    font-size: 14px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #AD61FF;
+    color: #FFFFFF;
+    transition: 1s;
+  }
+  
+  .FilterBlockItem_artist__UEFAC {
+    top: 231px;
+    left: 514px;
+  }
+  .FilterBlockItem_year__Tl6OA {
+    top: 231px;
+    left: 652px;
+  }
+  .FilterBlockItem_genre__G_Bro {
+    top: 231px;
+    left: 744px;
+  }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/FilterBlock/FilterBlock.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
 .FilterBlock_centerBlockFilter__UsY_5 {
+    height: 10px;
     display: flex;
+    gap: 12px;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 51px;
+    align-items: flex-end;
+    margin-bottom: 50px;
   }
   
   .FilterBlock_centerBlockContent___cSEI {
@@ -707,6 +668,54 @@
   }
 
   .FilterBlock_filterTitle__6gsei {
+    color:#fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 15px;
+  }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/CenterBlock/CenterBlock.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.CenterBlock_mainCenterBlock__4x7fS {
+    width: 100px;
+    flex-grow: 3;
+    padding: 20px 40px 20px 111px;
+  }
+
+  .CenterBlock_centerBlockSearch__vbeYH {
+    width: 100%;
+    border-bottom: 1px solid #4e4e4e;
+    margin-bottom: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .CenterBlock_centerBlockH2__it2Va {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.8px;
+    margin-bottom: 45px;
+  }
+  
+  .CenterBlock_centerBlockFilter__0ex1i {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 51px;
+  }
+  
+  .CenterBlock_centerBlockContent__wlogo {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+  }
+
+  .CenterBlock_filterTitle__AJnf3 {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -714,7 +723,7 @@
     margin-right: 15px;
   }
   
-  .FilterBlock_filterButton__Ze5zX {
+  .CenterBlock_filterButton__SVdz5 {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -724,9 +733,70 @@
     padding: 6px 20px;
   }
   
-  .FilterBlock_filterButton__Ze5zX:not(:last-child) {
+  .CenterBlock_filterButton__SVdz5:not(:last-child) {
     margin-right: 10px;
   }
+  
+  .CenterBlock_playlistTitleCol__3Dk8U {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+  }
+  
+  .CenterBlock_playlistTitleSvg__XzWDA {
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .CenterBlock_col01__Q6mcG {
+    width: 447px;
+  }
+  
+  .CenterBlock_col02__KKVtP {
+    width: 321px;
+  }
+  
+  .CenterBlock_col03__B0R39 {
+    width: 245px;
+  }
+  
+  .CenterBlock_col04___Y_f5 {
+    width: 60px;
+    text-align: end;}
+
+    .CenterBlock_contentTitle__XaxxE {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+      }
+
+      .CenterBlock_searchText__5_xev {
+        flex-grow: 100;
+        background-color: transparent;
+        border: none;
+        padding: 13px 10px 14px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+
+      .CenterBlock_searchSvg__JUoai {
+        width: 17px;
+        height: 17px;
+        margin-right: 5px;
+        stroke: #ffffff;
+        fill: transparent;
+      }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/MainSlideBar/MainSlideBar.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
@@ -851,6 +921,15 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+  }
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Main/Main.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.Main_main__NTSgt {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 /*!*******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/page.module.css ***!
