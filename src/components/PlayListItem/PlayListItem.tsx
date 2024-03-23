@@ -1,7 +1,9 @@
+import React from "react";
 import styles from "./PlayListItem.module.css";
 import classNames from "classnames";
 
-export default function PlayListItem() {
+export default function PlayListItem({ el }: { el: trackType }) {
+
   return (
     <div className={styles.playlistItem}>
       <div className={classNames(styles.playlistTrack, styles.track)}>
@@ -13,25 +15,25 @@ export default function PlayListItem() {
           </div>
           <div className={styles.trackTitleText}>
             <a className={styles.trackTitleLink} href="http://">
-              Guilt <span className={styles.trackTitleSpan}></span>
+              {el.name} <span className={styles.trackTitleSpan}></span>
             </a>
           </div>
         </div>
         <div className={styles.trackAuthor}>
           <a className={styles.trackAuthorLink} href="http://">
-            Nero
+            {el.author}
           </a>
         </div>
         <div className={styles.trackAlbum}>
           <a className={styles.trackAlbumLink} href="http://">
-            Welcome Reality
+            {el.album}
           </a>
         </div>
         <div className={styles.trackTime}>
+          <span className={styles.trackTimeText}>{el.duration_in_seconds}</span>
           <svg className={styles.trackTimeSvg}>
             <use href="/img/icon/sprite.svg#icon-like"></use>
           </svg>
-          <span className={styles.trackTimeText}>4:44</span>
         </div>
       </div>
     </div>

@@ -7,10 +7,10 @@ export default function NotFound() {
       <div className={styles.containerNf}>
         <h1 className={styles.containerH1}>404</h1>
         <h3 className={styles.containerH3}>
-          Page not found
+        Страница не найдена
         </h3>
         <Link className={styles.containerLink} href="/">
-          <p className={styles.containerLinkP}>Back to main page</p>
+          <p className={styles.containerLinkP}>Вернуться на главную страницу</p>
         </Link>
       </div>
     </div>
