@@ -1,4 +1,4 @@
-type trackType = {
+export type trackType = {
     id: number;
     name: string;
     author: string;
@@ -8,10 +8,10 @@ type trackType = {
     album: string;
     logo: string | null;
     track_file: string;
-    stared_user: Array<userType>;
+    stared_user: Array<userType> | null;
 };
 
-type userType = {
+export type userType = {
     id: number;
     username: string;
     first_name: string;

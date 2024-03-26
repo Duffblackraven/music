@@ -1,8 +1,6 @@
-import { TrackList } from "@/components/TrackList/trackList";
-
 const API_URL = "https://skypro-music-api.skyeng.tech/catalog/";
 
-export async function getTracks(): Promise<TrackList[]> {
+export async function getTracks() {
     try {
         const response = await fetch(API_URL + "track/all/");
         if (!response.ok) {
@@ -14,7 +12,7 @@ export async function getTracks(): Promise<TrackList[]> {
         }
         const data = await response.json();
         console.log(data);
-        return data as TrackList[];
+        return data;
     } catch (error) {
         console.warn(error);
         throw error;

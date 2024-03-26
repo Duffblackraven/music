@@ -1,45 +1,136 @@
 .barVolume {
-    width: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 92px 0 0;
-  }
-  .volumeContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-  }
+  width: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 92px;
+}
 
-  .volumeImage {
-    width: 13px;
-    height: 18px;
-    margin-right: 17px;
-  }
-  
-  .volumeSvg {
-    width: 13px;
-    height: 18px;
-    fill: transparent;
-  }
-  
-  .volumeProgress {
-    width: 109px;
-  }
-  
-  .volumeProgressLine {
-    width: 109px;
-  }
+.volumeContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.volumeImage {
+  width: 13px;
+  height: 18px;
+  margin-right: 17px;
+}
+
+.volumeSvg {
+  width: 13px;
+  height: 18px;
+  fill: transparent;
+}
+
+.volumeProgress {
+  width: 109px;
+  display: flex;
+}
+
+
+
+.volumeProgressLine {
+  height: 4px;
+  -webkit-appearance: none;
+  background:#797979;
+}
+
+ .sliderProgress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 12px + var(--ratio) * (100% - 12px));
+}
+
+.volumeProgressLine:focus {
+  outline: none;
+}
+
+.volumeProgressLine::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  /* background: #000000;
+  border: 2px solid #FFFFFF; */
+  background: #000000; 
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 2px black;
+  margin-top: calc(4px * 0.5 - max(12px * 0.5,2px));
+}
+
+.volumeProgressLine::-webkit-slider-runnable-track {
+  height: 4px;
+  border: none;
+  border-radius: 0.5em;
+  background: #000000;
+  box-shadow: none;
+}
+
+.sliderProgress::-webkit-slider-runnable-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #000000;
+}
+
+.volumeProgressLine::-moz-range-thumb {
+  width: max(calc(12px - 2px - 2px),0px);
+  height: max(calc(12px - 2px - 2px),0px);
+  border-radius: 6px;
+  /* background: #000000;
+  border: 2px solid #FFFFFF; */
+  background: #797979; /* Черный цвет */
+  border: 2px solid #ffffff; /* Белая обводка */
+  box-shadow: 0 0 2px black;
+}
+
+.volumeProgressLine::-moz-range-track {
+  height: 4px;
+  border: none;
+  border-radius: 0.5em;
+  background: #000000;
+  box-shadow: none;
+}
+
+.sliderProgress::-moz-range-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #000000;
+}
+
+.volumeProgressLine::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+.volumeProgressLine::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+.volumeProgressLine::-ms-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  /* background: #000000;
+  border: 2px solid #FFFFFF; */
+  background: #000000;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 2px black;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+.volumeProgressLine::-ms-track {
+  height: 4px;
+  border-radius: 0.5em;
+  background: #000000;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.sliderProgress::-ms-fill-lower {
+  height: 4px;
+  border-radius: 0.5em 0 0 0.5em;
+  margin: -undefined 0 -undefined -undefined;
+  background: #FFFFFF;
+  border: none;
+  border-right-width: 0;
+}
