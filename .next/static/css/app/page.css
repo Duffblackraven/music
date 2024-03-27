@@ -29,9 +29,208 @@
   .BarVolume_volumeProgress__Ou5iI {
     width: 109px;
   }
-  
-  .BarVolume_volumeProgressLine__YSWbA {
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].BarVolume_volumeProgressLine__YSWbA {
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress__Pnhw8 {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 12px + var(--ratio) * (100% - 12px));
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+  margin-top: calc(max((2px - 1px - 1px) * 0.5,0px) - max(12px * 0.5,2px));
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-webkit-slider-runnable-track {
+  height: 2px;
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  background: #797979;
+  box-shadow: none;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress__Pnhw8::-webkit-slider-runnable-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #797979;
+}
+
+/*mozilla*/
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-moz-range-thumb {
+  width: max(calc(12px - 2px - 2px),0px);
+  height: max(calc(12px - 2px - 2px),0px);
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-moz-range-track {
+  height: max(calc(2px - 1px - 1px),0px);
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  background: #797979;
+  box-shadow: none;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress__Pnhw8::-moz-range-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #797979;
+}
+
+/*ms*/
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-ms-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA::-ms-track {
+  height: 2px;
+  border-radius: 8px;
+  background: #797979;
+  border: 1px solid #b2b2b2;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress__Pnhw8::-ms-fill-lower {
+  height: max(calc(2px - 1px - 1px),0px);
+  border-radius: 8px 0 0 8px;
+  margin: -1px 0 -1px -1px;
+  background: #FFFFFF;
+  border: 1px solid #b2b2b2;
+  border-right-width: 0;
+}
+  /* .volumeProgressLine {
     width: 109px;
+    height: 2px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #797979;
+    cursor: pointer;
+  }
+  .volumeProgressLine::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 2px black;
+  } */
+
+  /* .volumeProgressLine::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background: #007CF8;
+    border: none;
+    box-shadow: 0 0 2px black;
+    margin-top: calc(max((1em - 1px - 1px) * 0.5,0px) - 2em * 0.5);
+  } */
+  
+  /* .volumeProgressLine::-webkit-slider-runnable-track {
+    height: 1em;
+    border: 1px solid #b2b2b2;
+    border-radius: 0.5em;
+    background: #EFEFEF;
+    box-shadow: none;
+  } */
+  
+  /* .volumeProgressLine::-webkit-slider-runnable-track {
+    background: linear-gradient(#007cf8,#007cf8) 0/var(--sx) 100% no-repeat, #EFEFEF;
+  } */
+  /* .volumeProgressLine::-ms-fill-lower {
+    height: max(calc(1em - 1px - 1px),0px);
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -1px 0 -1px -1px;
+    background: #007cf8;
+    border: 1px solid #b2b2b2;
+    border-right-width: 0;
+  } */
+ 
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ProgressBar/ProgressBar.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.ProgressBar_styledProgressInput__CIZZK {
+    --progress-height: 12px;
+    --progress-color: rgb(0, 123, 255);
+    --progress-bg-color: #2e2e2e;
+  
+    margin: 0;
+    width: 100%;
+    height: var(--progress-height);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.2s;
+    background: linear-gradient(to right, var(--progress-color) var(--value), var(--progress-bg-color) var(--value));
+    opacity: 0.5;
+    z-index: 2;
+  }
+  
+  
+  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-runnable-track {
+    height: var(--progress-height);
+    background: var(--progress-bg-color);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-thumb {
+   --thumb-height: 1px;
+      --thumb-width: 1px;
+      position: relative;
+      -webkit-appearance: none;
+      width: var(--thumb-width, var(--thumb-height));
+      box-shadow: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+        100vmax var(--progress-color);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-moz-range-track {
+    background: var(--progress-bg-color);
+    height: var(--progress-height);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-moz-range-thumb {
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--progress-color);
   }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Bar/Bar.module.css ***!
@@ -266,151 +465,151 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/PlayListItem/PlayListItem.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
 .PlayListItem_playlist__S_uRd {
-    height: 700px;
-    overflow-y: auto;
-    overflow-y: hidden;
+  height: 700px;
+  overflow-y: auto;
+  overflow-y: hidden;
 }
 .PlayListItem_playlist__S_uRd::-webkit-scrollbar {
-   display: none;
+ display: none;
 }
 
 .PlayListItem_contentPlaylist__P1gbL {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-  }
-  
-  .PlayListItem_playlistTitleCol__rLxwX {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    color: #696969;
-    text-transform: uppercase;
-  }
-  
-  .PlayListItem_playlistTitleSvg__UE_7h {
-    width: 12px;
-    height: 12px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .PlayListItem_col01__P8rmk {
-    width: 447px;
-  }
-  
-  .PlayListItem_col02__l_tDS {
-    width: 321px;
-  }
-  
-  .PlayListItem_col03__P_I0E {
-    width: 245px;
-  }
-  
-  .PlayListItem_col04__8yGdl {
-    width: 60px;
-    text-align: end;
-  }
-  
-  .PlayListItem_playlistItem__lm27K {
-    width: 100%;
-    display: block;
-    margin-bottom: 12px;
-  }
-  
-  .PlayListItem_playlistTrack__J4N1U {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .PlayListItem_trackTitle__Wq9Gj {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 447px;
-  }
-  
-  .PlayListItem_trackTitleImage__nolK8 {
-    width: 51px;
-    height: 51px;
-    padding: 16px;
-    background: #313131;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 17px;
-  }
-  
-  .PlayListItem_trackTitleSvg__yn2pf {
-    width: 18px;
-    height: 17px;
-    fill: transparent;
-    stroke: #4e4e4e;
-  }
-  
-  .PlayListItem_trackTitleLink__VTWy5 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff;
-  }
-  
-  .PlayListItem_trackTitleSpan___b4bt {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4e4e4e;
-  }
-  
-  .PlayListItem_trackAuthor__V0t_Z {
-    width: 321px;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .PlayListItem_trackAuthorLink__fABSd {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff;
-    text-align: left;
-  }
-  
-  .PlayListItem_trackAlbum__AuWYa {
-    width: 245px;
-  }
-  
-  .PlayListItem_trackAlbumLink__IQHYN {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #696969;
-  }
-  
-  .PlayListItem_trackTimeSvg__fww1c {
-    width: 14px;
-    height: 12px;
-    margin-right: 17px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .PlayListItem_trackTimeText__gkIP4 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: right;
-    color: #696969;
-  }
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.PlayListItem_playlistTitleCol__rLxwX {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #696969;
+  text-transform: uppercase;
+}
+
+.PlayListItem_playlistTitleSvg__UE_7h {
+  width: 12px;
+  height: 12px;
+  fill: transparent;
+  stroke: #696969;
+}
+
+.PlayListItem_col01__P8rmk {
+  width: 447px;
+}
+
+.PlayListItem_col02__l_tDS {
+  width: 321px;
+}
+
+.PlayListItem_col03__P_I0E {
+  width: 245px;
+}
+
+.PlayListItem_col04__8yGdl {
+  width: 60px;
+  text-align: end;
+}
+
+.PlayListItem_playlistItem__lm27K {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.PlayListItem_playlistTrack__J4N1U {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PlayListItem_trackTitle__Wq9Gj {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 447px;
+}
+
+.PlayListItem_trackTitleImage__nolK8 {
+  width: 51px;
+  height: 51px;
+  padding: 16px;
+  background: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 17px;
+}
+
+.PlayListItem_trackTitleSvg__yn2pf {
+  width: 18px;
+  height: 17px;
+  fill: transparent;
+  stroke: #4e4e4e;
+}
+
+.PlayListItem_trackTitleLink__VTWy5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.PlayListItem_trackTitleSpan___b4bt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4e4e4e;
+}
+
+.PlayListItem_trackAuthor__V0t_Z {
+  width: 321px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.PlayListItem_trackAuthorLink__fABSd {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.PlayListItem_trackAlbum__AuWYa {
+  width: 245px;
+}
+
+.PlayListItem_trackAlbumLink__IQHYN {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #696969;
+}
+
+.PlayListItem_trackTimeSvg__fww1c {
+  width: 14px;
+  height: 12px;
+  margin-right: 17px;
+  fill: transparent;
+  stroke: #696969;
+}
+
+.PlayListItem_trackTimeText__gkIP4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #696969;
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ContentPlaylist/ContentPlaylist.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -679,124 +878,113 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/CenterBlock/CenterBlock.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
 .CenterBlock_mainCenterBlock__4x7fS {
-    width: 100px;
-    flex-grow: 3;
-    padding: 20px 40px 20px 111px;
-  }
+  width: 100px;
+  flex-grow: 3;
+  padding: 20px 40px 20px 111px;
+  height: 100vh;
+}
 
-  .CenterBlock_centerBlockSearch__vbeYH {
-    width: 100%;
-    border-bottom: 1px solid #4e4e4e;
-    margin-bottom: 51px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .CenterBlock_centerBlockH2__it2Va {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    letter-spacing: -0.8px;
-    margin-bottom: 45px;
-  }
-  
-  .CenterBlock_centerBlockFilter__0ex1i {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 51px;
-  }
-  
-  .CenterBlock_centerBlockContent__wlogo {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-  }
+.CenterBlock_centerBlockSearch__vbeYH {
+  width: 100%;
+  border-bottom: 1px solid #4e4e4e;
+  margin-bottom: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-  .CenterBlock_filterTitle__AJnf3 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 15px;
-  }
-  
-  .CenterBlock_filterButton__SVdz5 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    border: 1px solid #ffffff;
-    border-radius: 60px;
-    padding: 6px 20px;
-  }
-  
-  .CenterBlock_filterButton__SVdz5:not(:last-child) {
-    margin-right: 10px;
-  }
-  
-  .CenterBlock_playlistTitleCol__3Dk8U {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    color: #696969;
-    text-transform: uppercase;
-  }
-  
-  .CenterBlock_playlistTitleSvg__XzWDA {
-    width: 12px;
-    height: 12px;
-    fill: transparent;
-    stroke: #696969;
-  }
-  
-  .CenterBlock_col01__Q6mcG {
-    width: 447px;
-  }
-  
-  .CenterBlock_col02__KKVtP {
-    width: 321px;
-  }
-  
-  .CenterBlock_col03__B0R39 {
-    width: 245px;
-  }
-  
-  .CenterBlock_col04___Y_f5 {
-    width: 60px;
-    text-align: end;}
+.CenterBlock_centerBlockH2__it2Va {
+  color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+  margin-bottom: 45px;
+}
 
-    .CenterBlock_contentTitle__XaxxE {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
+.CenterBlock_centerBlockFilter__0ex1i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 46px;
+}
 
-      .CenterBlock_searchText__5_xev {
-        flex-grow: 100;
-        background-color: transparent;
-        border: none;
-        padding: 13px 10px 14px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #ffffff;
-      }
+.CenterBlock_centerBlockContent__wlogo {
+  display: flex;
+  flex-direction: column;
+}
 
-      .CenterBlock_searchSvg__JUoai {
-        width: 17px;
-        height: 17px;
-        margin-right: 5px;
-        stroke: #ffffff;
-        fill: transparent;
-      }
+.CenterBlock_filterTitle__AJnf3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 15px;
+}
+
+.CenterBlock_filterButton__SVdz5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 60px;
+  padding: 6px 20px;
+}
+
+.CenterBlock_filterButton__SVdz5:not(:last-child) {
+  margin-right: 10px;
+}
+
+.CenterBlock_playlistTitleCol__3Dk8U {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #696969;
+  text-transform: uppercase;
+}
+
+.CenterBlock_playlistTitleSvg__XzWDA {
+  width: 12px;
+  height: 12px;
+  fill: transparent;
+  stroke: #696969;
+}
+
+.CenterBlock_col04___Y_f5 {
+  text-align: center;}
+
+  .CenterBlock_contentTitle__XaxxE {
+      display: inline-grid;
+      grid-template-columns: [line1] 50% [line2] 20% [line3] 20% [line4] 7% [line5] 3%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .CenterBlock_searchText__5_xev {
+      flex-grow: 100;
+      background-color: transparent;
+      border: none;
+      padding: 13px 10px 14px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    .CenterBlock_searchSvg__JUoai {
+      width: 17px;
+      height: 17px;
+      margin-right: 5px;
+      stroke: #ffffff;
+      fill: transparent;
+    }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/MainSlideBar/MainSlideBar.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/

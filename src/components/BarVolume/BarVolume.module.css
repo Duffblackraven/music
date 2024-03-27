@@ -39,7 +39,154 @@
   .volumeProgress {
     width: 109px;
   }
-  
-  .volumeProgressLine {
+/*generated with Input range slider CSS style generator (version 20211225)
+https://toughengineer.github.io/demo/slider-styler*/
+input[type=range].volumeProgressLine {
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type=range].volumeProgressLine.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 12px + var(--ratio) * (100% - 12px));
+}
+
+input[type=range].volumeProgressLine:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range].volumeProgressLine::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+  margin-top: calc(max((2px - 1px - 1px) * 0.5,0px) - max(12px * 0.5,2px));
+}
+
+input[type=range].volumeProgressLine::-webkit-slider-runnable-track {
+  height: 2px;
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  background: #797979;
+  box-shadow: none;
+}
+
+input[type=range].volumeProgressLine.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #797979;
+}
+
+/*mozilla*/
+input[type=range].volumeProgressLine::-moz-range-thumb {
+  width: max(calc(12px - 2px - 2px),0px);
+  height: max(calc(12px - 2px - 2px),0px);
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+}
+
+input[type=range].volumeProgressLine::-moz-range-track {
+  height: max(calc(2px - 1px - 1px),0px);
+  border: 1px solid #b2b2b2;
+  border-radius: 8px;
+  background: #797979;
+  box-shadow: none;
+}
+
+input[type=range].volumeProgressLine.slider-progress::-moz-range-track {
+  background: linear-gradient(#FFFFFF,#FFFFFF) 0/var(--sx) 100% no-repeat, #797979;
+}
+
+/*ms*/
+input[type=range].volumeProgressLine::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].volumeProgressLine::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type=range].volumeProgressLine::-ms-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 1em;
+  background:  #1A1A1A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px black;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type=range].volumeProgressLine::-ms-track {
+  height: 2px;
+  border-radius: 8px;
+  background: #797979;
+  border: 1px solid #b2b2b2;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type=range].volumeProgressLine.slider-progress::-ms-fill-lower {
+  height: max(calc(2px - 1px - 1px),0px);
+  border-radius: 8px 0 0 8px;
+  margin: -1px 0 -1px -1px;
+  background: #FFFFFF;
+  border: 1px solid #b2b2b2;
+  border-right-width: 0;
+}
+  /* .volumeProgressLine {
     width: 109px;
+    height: 2px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #797979;
+    cursor: pointer;
   }
+  .volumeProgressLine::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 2px black;
+  } */
+
+  /* .volumeProgressLine::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    background: #007CF8;
+    border: none;
+    box-shadow: 0 0 2px black;
+    margin-top: calc(max((1em - 1px - 1px) * 0.5,0px) - 2em * 0.5);
+  } */
+  
+  /* .volumeProgressLine::-webkit-slider-runnable-track {
+    height: 1em;
+    border: 1px solid #b2b2b2;
+    border-radius: 0.5em;
+    background: #EFEFEF;
+    box-shadow: none;
+  } */
+  
+  /* .volumeProgressLine::-webkit-slider-runnable-track {
+    background: linear-gradient(#007cf8,#007cf8) 0/var(--sx) 100% no-repeat, #EFEFEF;
+  } */
+  /* .volumeProgressLine::-ms-fill-lower {
+    height: max(calc(1em - 1px - 1px),0px);
+    border-radius: 0.5em 0 0 0.5em;
+    margin: -1px 0 -1px -1px;
+    background: #007cf8;
+    border: 1px solid #b2b2b2;
+    border-right-width: 0;
+  } */
+ 
