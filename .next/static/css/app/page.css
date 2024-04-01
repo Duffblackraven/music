@@ -840,21 +840,20 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   justify-content: center;
   margin-right: 17px;
 }
-/* .trackTitleImageSelected {
-  background: #D9B6FF;
-  opacity: 0.3;
-} */
-.PlayListItem_trackTitleImageAnimated__ETMvi{
-  animation: PlayListItem_trackTitleImageAnimated__ETMvi ease-in-out 1.4s infinite;
+
+.PlayListItem_dotIcon__NXVP5{
+  animation: PlayListItem_trackTitleImageAnimated__ETMvi ease-in-out 1.5s infinite;
 }
 @keyframes PlayListItem_trackTitleImageAnimated__ETMvi{
   0% {
     opacity: 0.3;
+    transform: scale(0.8);
+    transform-origin: center;
   }
   50% {
-    transform: scale(0.8);
     opacity: 0.6;
-  }}
+  }
+}
 
 .PlayListItem_trackTitleSvg__yn2pf {
   width: 18px;

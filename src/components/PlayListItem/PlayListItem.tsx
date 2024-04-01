@@ -4,7 +4,6 @@ import classNames from "classnames";
 import { formatTime } from "@/lib/formatTime";
 import { useAppSelector } from "@/types/hooks";
 
-
 type PlayListItemProps = {
   name: string;
   author: string;
@@ -22,24 +21,27 @@ export default function PlayListItem({
   setTrack,
   isSetTrack,
 }: PlayListItemProps) {
-
   const trackDuration = formatTime(duration);
-
-  const { isPlaying } = useAppSelector((state) => state.tracks)
+  const { isPlaying } = useAppSelector((state) => state.tracks);
 
   return (
     <div onClick={setTrack} className={classNames(styles.playlistItem, styles.playlistTrack, styles.track)}>
 
-      <div className={classNames(styles.trackTitleImage, { [styles.trackTitleImageSelected]: isSetTrack }, { [styles.trackTitleImageAnimated]: isPlaying && isSetTrack })}>
+      <div className={classNames(styles.trackTitleImage, { [styles.trackTitleImageSelected]: isSetTrack }, { [styles.trackTitleImageAnimated]: isPlaying && isSetTrack }, { [styles.trackTitleImageDot]: isSetTrack && (isPlaying || !isPlaying) })}>
         <svg className={styles.trackTitleSvg}>
-          <use href="/img/icon/sprite.svg#icon-note"></use>
+          <use
+            className={
+              isSetTrack
+                ? isPlaying
+                  ? styles.dotIcon : styles.dot : styles.noteIcon
+            }
+            href={isSetTrack ? (isPlaying ? "/img/icon/sprite.svg#icon-dot" : "/img/icon/sprite.svg#icon-dot") : "/img/icon/sprite.svg#icon-note"}
+          ></use>
         </svg>
       </div>
 
       <div className={styles.trackTitle}>
-        <div className={styles.trackTitle}>
-          <span className={classNames(styles.trackText, styles.trackTextLeft)}>{name}</span>
-        </div>
+        <span className={classNames(styles.trackText, styles.trackTextLeft)}>{name}</span>
       </div>
       <div className={styles.trackAuthor}>
         <span className={classNames(styles.trackText, styles.trackTextSecondary)}>{author}</span>
