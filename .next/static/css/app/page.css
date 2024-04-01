@@ -1,3 +1,55 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ProgressBar/ProgressBar.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.ProgressBar_styledProgressInput__CIZZK {
+    --progress-height: 12px;
+    --progress-color: rgb(0, 123, 255);
+    --progress-bg-color: #2e2e2e;
+  
+    margin: 0;
+    width: 100%;
+    height: var(--progress-height);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.2s;
+    background: linear-gradient(to right, var(--progress-color) var(--value), var(--progress-bg-color) var(--value));
+    opacity: 0.5;
+    z-index: 2;
+  }
+  
+  
+  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-runnable-track {
+    height: var(--progress-height);
+    background: var(--progress-bg-color);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-thumb {
+   --thumb-height: 1px;
+      --thumb-width: 1px;
+      position: relative;
+      -webkit-appearance: none;
+      width: var(--thumb-width, var(--thumb-height));
+      box-shadow: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+        100vmax var(--progress-color);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-moz-range-track {
+    background: var(--progress-bg-color);
+    height: var(--progress-height);
+  }
+  
+  .ProgressBar_styledProgressInput__CIZZK::-moz-range-thumb {
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--progress-color);
+  }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/BarVolume/BarVolume.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************/
@@ -180,58 +232,6 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
     border-right-width: 0;
   } */
  
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ProgressBar/ProgressBar.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
-.ProgressBar_styledProgressInput__CIZZK {
-    --progress-height: 12px;
-    --progress-color: rgb(0, 123, 255);
-    --progress-bg-color: #2e2e2e;
-  
-    margin: 0;
-    width: 100%;
-    height: var(--progress-height);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-         appearance: none;
-    cursor: pointer;
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-    transition: height 0.2s;
-    background: linear-gradient(to right, var(--progress-color) var(--value), var(--progress-bg-color) var(--value));
-    opacity: 0.5;
-    z-index: 2;
-  }
-  
-  
-  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-runnable-track {
-    height: var(--progress-height);
-    background: var(--progress-bg-color);
-  }
-  
-  .ProgressBar_styledProgressInput__CIZZK::-webkit-slider-thumb {
-   --thumb-height: 1px;
-      --thumb-width: 1px;
-      position: relative;
-      -webkit-appearance: none;
-      width: var(--thumb-width, var(--thumb-height));
-      box-shadow: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
-        100vmax var(--progress-color);
-  }
-  
-  .ProgressBar_styledProgressInput__CIZZK::-moz-range-track {
-    background: var(--progress-bg-color);
-    height: var(--progress-height);
-  }
-  
-  .ProgressBar_styledProgressInput__CIZZK::-moz-range-thumb {
-    border: none;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background: var(--progress-color);
-  }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Bar/Bar.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************/
@@ -461,25 +461,70 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
     width: 109px;
   }
   
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/PlayListItem/PlayListItem.module.css ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************/
-.PlayListItem_playlist__S_uRd {
-  height: 700px;
-  overflow-y: auto;
-  overflow-y: hidden;
-}
-.PlayListItem_playlist__S_uRd::-webkit-scrollbar {
- display: none;
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/CenterBlock/CenterBlock.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.CenterBlock_mainCenterBlock__4x7fS {
+  width: 100px;
+  flex-grow: 3;
+  padding: 20px 40px 20px 111px;
+  height: 100vh;
 }
 
-.PlayListItem_contentPlaylist__P1gbL {
+.CenterBlock_centerBlockSearch__vbeYH {
+  width: 100%;
+  border-bottom: 1px solid #4e4e4e;
+  margin-bottom: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.CenterBlock_centerBlockH2__it2Va {
+  color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.8px;
+  margin-bottom: 45px;
+}
+
+.CenterBlock_centerBlockFilter__0ex1i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 46px;
+}
+
+.CenterBlock_centerBlockContent__wlogo {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
-.PlayListItem_playlistTitleCol__rLxwX {
+.CenterBlock_filterTitle__AJnf3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 15px;
+}
+
+.CenterBlock_filterButton__SVdz5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 60px;
+  padding: 6px 20px;
+}
+
+.CenterBlock_filterButton__SVdz5:not(:last-child) {
+  margin-right: 10px;
+}
+
+.CenterBlock_playlistTitleCol__3Dk8U {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -489,38 +534,290 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   text-transform: uppercase;
 }
 
-.PlayListItem_playlistTitleSvg__UE_7h {
+.CenterBlock_playlistTitleSvg__XzWDA {
   width: 12px;
   height: 12px;
   fill: transparent;
   stroke: #696969;
 }
 
-.PlayListItem_col01__P8rmk {
-  width: 447px;
+.CenterBlock_col04___Y_f5 {
+  text-align: center;}
+
+  .CenterBlock_contentTitle__XaxxE {
+      display: inline-grid;
+      grid-template-columns: [line1] 50% [line2] 20% [line3] 20% [line4] 7% [line5] 3%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .CenterBlock_searchText__5_xev {
+      flex-grow: 100;
+      background-color: transparent;
+      border: none;
+      padding: 13px 10px 14px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+
+    .CenterBlock_searchSvg__JUoai {
+      width: 17px;
+      height: 17px;
+      margin-right: 5px;
+      stroke: #ffffff;
+      fill: transparent;
+    }
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/page.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.page_main__GlU4n {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
 }
 
-.PlayListItem_col02__l_tDS {
-  width: 321px;
+.page_description__86bsR {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
 }
 
-.PlayListItem_col03__P_I0E {
-  width: 245px;
+.page_description__86bsR a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.PlayListItem_col04__8yGdl {
-  width: 60px;
-  text-align: end;
+.page_description__86bsR p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
 }
 
+.page_code__9lUUd {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.page_grid__f5Kdy {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}
+
+.page_card__QV0Om {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.page_card__QV0Om span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.page_card__QV0Om h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.page_card__QV0Om p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+.page_center__5oHG7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.page_center__5oHG7::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.page_center__5oHG7::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.page_center__5oHG7::before,
+.page_center__5oHG7::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
+
+.page_logo__7fc9l {
+  position: relative;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .page_card__QV0Om:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .page_card__QV0Om:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .page_card__QV0Om:hover span {
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .page_content__kDoxQ {
+    padding: 4rem;
+  }
+
+  .page_grid__f5Kdy {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .page_card__QV0Om {
+    padding: 1rem 2.5rem;
+  }
+
+  .page_card__QV0Om h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .page_center__5oHG7 {
+    padding: 8rem 0 6rem;
+  }
+
+  .page_center__5oHG7::before {
+    transform: none;
+    height: 300px;
+  }
+
+  .page_description__86bsR {
+    font-size: 0.8rem;
+  }
+
+  .page_description__86bsR a {
+    padding: 1rem;
+  }
+
+  .page_description__86bsR p,
+  .page_description__86bsR div {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+  }
+
+  .page_description__86bsR p {
+    align-items: center;
+    inset: 0 0 auto;
+    padding: 2rem 1rem 1.4rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 1),
+      rgba(var(--callout-rgb), 0.5)
+    );
+    background-clip: padding-box;
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+  }
+
+  .page_description__86bsR div {
+    align-items: flex-end;
+    pointer-events: none;
+    inset: auto 0 0;
+    padding: 2rem;
+    height: 200px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--background-end-rgb)) 40%
+    );
+    z-index: 1;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .page_grid__f5Kdy {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page_vercelLogo__rOY_u {
+    filter: invert(1);
+  }
+
+  .page_logo__7fc9l {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes page_rotate__durgN {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/PlayListItem/PlayListItem.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
 .PlayListItem_playlistItem__lm27K {
   width: 100%;
-  display: block;
   margin-bottom: 12px;
-}
+  display: inline-grid;
+  grid-template-columns: [line1] 10% [line2] 30% [line3] 20% [line4] 20% [line5] 7% [line6] 3%;
+   }
 
 .PlayListItem_playlistTrack__J4N1U {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -530,19 +827,34 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 447px;
+  /* width: 200px; */
 }
 
 .PlayListItem_trackTitleImage__nolK8 {
   width: 51px;
   height: 51px;
-  padding: 16px;
+  padding: 0px;
   background: #313131;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 17px;
 }
+/* .trackTitleImageSelected {
+  background: #D9B6FF;
+  opacity: 0.3;
+} */
+.PlayListItem_trackTitleImageAnimated__ETMvi{
+  animation: PlayListItem_trackTitleImageAnimated__ETMvi ease-in-out 1.4s infinite;
+}
+@keyframes PlayListItem_trackTitleImageAnimated__ETMvi{
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }}
 
 .PlayListItem_trackTitleSvg__yn2pf {
   width: 18px;
@@ -551,7 +863,7 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   stroke: #4e4e4e;
 }
 
-.PlayListItem_trackTitleLink__VTWy5 {
+.PlayListItem_trackTitleSpan___b4bt {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -559,21 +871,13 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   color: #ffffff;
 }
 
-.PlayListItem_trackTitleSpan___b4bt {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #4e4e4e;
-}
-
 .PlayListItem_trackAuthor__V0t_Z {
-  width: 321px;
+  /* width: 321px; */
   display: flex;
   justify-content: flex-start;
 }
 
-.PlayListItem_trackAuthorLink__fABSd {
+.PlayListItem_trackAuthorText__lgyCr {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -582,33 +886,36 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   text-align: left;
 }
 
-.PlayListItem_trackAlbum__AuWYa {
-  width: 245px;
-}
-
-.PlayListItem_trackAlbumLink__IQHYN {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #696969;
+.PlayListItem_trackTime__hOabn {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
 }
 
 .PlayListItem_trackTimeSvg__fww1c {
   width: 14px;
   height: 12px;
-  margin-right: 17px;
   fill: transparent;
   stroke: #696969;
 }
 
-.PlayListItem_trackTimeText__gkIP4 {
+.PlayListItem_trackText__P7nEw {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  text-align: right;
+  color: #ffffff;
+}
+.PlayListItem_trackTextSecondary__DdjFI {
   color: #696969;
+}
+.PlayListItem_trackTextLeft__4Vzek {
+  text-align: left;
+}  
+.PlayListItem_trackTextRight__DCj_H {
+  text-align: right;
 }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ContentPlaylist/ContentPlaylist.module.css ***!
@@ -874,117 +1181,15 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
     line-height: 24px;
     margin-right: 15px;
   }
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/CenterBlock/CenterBlock.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
-.CenterBlock_mainCenterBlock__4x7fS {
-  width: 100px;
-  flex-grow: 3;
-  padding: 20px 40px 20px 111px;
-  height: 100vh;
-}
-
-.CenterBlock_centerBlockSearch__vbeYH {
-  width: 100%;
-  border-bottom: 1px solid #4e4e4e;
-  margin-bottom: 46px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.CenterBlock_centerBlockH2__it2Va {
-  color: #FFF;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 72px;
-  letter-spacing: -0.8px;
-  margin-bottom: 45px;
-}
-
-.CenterBlock_centerBlockFilter__0ex1i {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 46px;
-}
-
-.CenterBlock_centerBlockContent__wlogo {
-  display: flex;
-  flex-direction: column;
-}
-
-.CenterBlock_filterTitle__AJnf3 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  margin-right: 15px;
-}
-
-.CenterBlock_filterButton__SVdz5 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  border: 1px solid #ffffff;
-  border-radius: 60px;
-  padding: 6px 20px;
-}
-
-.CenterBlock_filterButton__SVdz5:not(:last-child) {
-  margin-right: 10px;
-}
-
-.CenterBlock_playlistTitleCol__3Dk8U {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 2px;
-  color: #696969;
-  text-transform: uppercase;
-}
-
-.CenterBlock_playlistTitleSvg__XzWDA {
-  width: 12px;
-  height: 12px;
-  fill: transparent;
-  stroke: #696969;
-}
-
-.CenterBlock_col04___Y_f5 {
-  text-align: center;}
-
-  .CenterBlock_contentTitle__XaxxE {
-      display: inline-grid;
-      grid-template-columns: [line1] 50% [line2] 20% [line3] 20% [line4] 7% [line5] 3%;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-    }
-
-    .CenterBlock_searchText__5_xev {
-      flex-grow: 100;
-      background-color: transparent;
-      border: none;
-      padding: 13px 10px 14px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      color: #ffffff;
-    }
-
-    .CenterBlock_searchSvg__JUoai {
-      width: 17px;
-      height: 17px;
-      margin-right: 5px;
-      stroke: #ffffff;
-      fill: transparent;
-    }
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Main/Main.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.Main_main__NTSgt {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/MainSlideBar/MainSlideBar.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
@@ -1110,247 +1315,3 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
     font-size: 16px;
     line-height: 24px;
   }
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/Main/Main.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-.Main_main__NTSgt {
-    flex: 1 1 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/page.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
-.page_main__GlU4n {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.page_description__86bsR {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.page_description__86bsR a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.page_description__86bsR p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.page_code__9lUUd {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.page_grid__f5Kdy {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
-}
-
-.page_card__QV0Om {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.page_card__QV0Om span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.page_card__QV0Om h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.page_card__QV0Om p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.page_center__5oHG7 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
-.page_center__5oHG7::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.page_center__5oHG7::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.page_center__5oHG7::before,
-.page_center__5oHG7::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.page_logo__7fc9l {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .page_card__QV0Om:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .page_card__QV0Om:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .page_card__QV0Om:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .page_content__kDoxQ {
-    padding: 4rem;
-  }
-
-  .page_grid__f5Kdy {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .page_card__QV0Om {
-    padding: 1rem 2.5rem;
-  }
-
-  .page_card__QV0Om h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .page_center__5oHG7 {
-    padding: 8rem 0 6rem;
-  }
-
-  .page_center__5oHG7::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .page_description__86bsR {
-    font-size: 0.8rem;
-  }
-
-  .page_description__86bsR a {
-    padding: 1rem;
-  }
-
-  .page_description__86bsR p,
-  .page_description__86bsR div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .page_description__86bsR p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    -webkit-backdrop-filter: blur(24px);
-            backdrop-filter: blur(24px);
-  }
-
-  .page_description__86bsR div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .page_grid__f5Kdy {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .page_vercelLogo__rOY_u {
-    filter: invert(1);
-  }
-
-  .page_logo__7fc9l {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes page_rotate__durgN {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-

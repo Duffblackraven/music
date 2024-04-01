@@ -1,6 +1,8 @@
-import { useState } from "react";
+"use client"
+
 import styles from "./BarVolume.module.css";
 import classNames from "classnames";
+import { useState } from "react";
 
 type BarVolumeProps = {
   handleVolume: any;
@@ -14,7 +16,6 @@ export default function BarVolume({ handleVolume }: BarVolumeProps) {
     setVolume(newVolume);
     handleVolume(+newVolume)
   };
-  
 
   return (
     <div className={classNames(styles.barVolume, styles.volume)}>

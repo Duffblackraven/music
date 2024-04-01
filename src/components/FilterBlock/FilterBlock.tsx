@@ -1,15 +1,16 @@
+"use client"
+
 import styles from "./FilterBlock.module.css";
 import classNames from "classnames";
 import { useState } from "react";
 import FilterBlockItem from "../FilterBlockItem/FilterBlockItem";
 import { artists, genres, years } from "./data";
-import { trackType } from "@/types/types";
+import { useAppSelector } from "@/types/hooks";
 
-type FilterBlockProps = {
-  trackList: trackType[];
-};
 
-const FilterBlock = ({ trackList }: FilterBlockProps) => {
+const FilterBlock = () => {
+
+  const playList = useAppSelector((state) => state.tracks.playList)
 
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const handleFilterClick = (newFilter: string) => {
