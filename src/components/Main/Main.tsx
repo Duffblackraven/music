@@ -1,8 +1,8 @@
 import styles from "./Main.module.css";
-import { Bar } from "@components/Bar";
+import { Nav } from "@components/Nav";
 import { CenterBlock } from "@/components/CenterBlock";
 import { MainSlideBar } from "@components/MainSlideBar";
-import { Nav } from "@components/Nav";
+import { Bar } from "@components/Bar";
 
 export default function Main() {
   return (

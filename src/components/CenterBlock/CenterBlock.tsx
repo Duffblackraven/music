@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import styles from "./CenterBlock.module.css";
-import { ContentPlaylist } from "@components/ContentPlaylist";
+import React from "react";
 import { FilterBlock } from "@/components/FilterBlock";
+import { ContentPlaylist } from "@components/ContentPlaylist";
 
 export default function CenterBlock() {
+
   return (
     <div className={classNames(styles.mainCenterBlock, styles.centerBlock)}>
       <div className={classNames(styles.centerBlockSearch, styles.search)}>
@@ -14,7 +16,7 @@ export default function CenterBlock() {
           className={styles.searchText}
           type="search"
           placeholder="Поиск"
-          name="search"
+          name="Поиск"
         />
       </div>
       <h2 className={styles.centerBlockH2}>Треки</h2>
@@ -27,19 +29,20 @@ export default function CenterBlock() {
       >
         <div className={classNames(styles.contentTitle, styles.playlistTitle)}>
           <div className={classNames(styles.playlistTitleCol, styles.col01)}>
-            ТРЕК
+          ТРЕК
           </div>
           <div className={classNames(styles.playlistTitleCol, styles.col02)}>
-            ИСПОЛНИТЕЛЬ
+          ИСПОЛНИТЕЛЬ
           </div>
           <div className={classNames(styles.playlistTitleCol, styles.col03)}>
-            АЛЬБОМ
+          АЛЬБОМ
           </div>
           <div className={classNames(styles.playlistTitleCol, styles.col04)}>
             <svg className={styles.playlistTitleSvg}>
               <use href="img/icon/sprite.svg#icon-watch"></use>
             </svg>
           </div>
+          <div></div>
         </div>
         <ContentPlaylist />
       </div>

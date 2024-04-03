@@ -1,3 +1,5 @@
+"use client"
+
 import styles from "./Nav.module.css";
 import classNames from "classnames";
 import Image from "next/image";
@@ -15,7 +17,7 @@ export default function Nav() {
     <nav className={classNames(styles.mainNav, styles.nav)}>
       <div className={classNames(styles.navLogo, styles.logo)}>
         <Image
-          alt="логотип"
+          alt="logo"
           width={113}
           height={17}
           className={styles.logoImage}
@@ -33,7 +35,7 @@ export default function Nav() {
             <ul className={styles.menuList}>
               <li className={styles.menuItem}>
                 <Link href="/" className={styles.menuLink}>
-                  Главная
+                Главная
                 </Link>
               </li>
               <li className={styles.menuItem}>Мой плейлист</li>

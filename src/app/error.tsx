@@ -18,11 +18,11 @@ export default function Error({ error, reset }: ErrorProps) {
             <div className={styles.containerNf}>
                 <h1 className={styles.containerH1}>:(</h1>
                 <h3 className={styles.containerH3}>
-                    Error loading page
+                Ошибка загрузки страницы
                 </h3>
-                <p className={styles.containerP}>Check the internet connection and try again</p>
+                <p className={styles.containerP}>Проверьте подключение к интернету и попробуйте еще раз</p>
                 <Link className={styles.containerLink} href="/">
-                    <p className={styles.containerLinkP}>Back to main page</p>
+                    <p className={styles.containerLinkP}>Вернуться на главную страницу</p>
                 </Link>
             </div>
         </div>
