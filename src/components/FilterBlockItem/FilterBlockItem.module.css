@@ -53,6 +53,7 @@
     text-align: left;
     margin-bottom: 8px;
     list-style-type: none;
+    cursor: pointer;
   }
 
   .CountPopUp {

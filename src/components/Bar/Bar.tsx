@@ -13,7 +13,7 @@ import {
   setNextTrack, setPrevTrack,
   setShuffle
 }
-  from "@/store/features/playlistSlice";
+  from "@/store/features/tracksSlice";
 
 export default function Bar() {
 

@@ -2,36 +2,38 @@
 
 import styles from "./ContentPlaylist.module.css";
 import classNames from "classnames";
-import React, { useEffect, useRef, useState } from "react";
-import { PlayListItem } from "@components/PlayListItem";
-import { trackType } from "@/types/types";
-import { useAppDispatch, useAppSelector } from "@/types/hooks";
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { trackType } from '@/types/types';
+import { setCurrentTrack, setPlayList } from '@/store/features/tracksSlice';
+import { PlayListItem } from '@components/PlayListItem';
 import { getTracks } from "@/api/api";
-import { setCurrentTrack, setPlayList } from "@/store/features/playlistSlice";
-
-
+import { useAppDispatch, useAppSelector } from "@/types/hooks";
 
 const ContentPlaylist = () => {
 
-  // get the tracklist from API
-  const [trackList, setTrackList] = useState<trackType[]>([]);
-  useEffect(() => {
-    getTracks().then((data) => setTrackList(data));
-  }, []);
-  // Redux tools: set the track playing
   const dispatcher = useAppDispatch();
+  const playList = useAppSelector((state) => state.tracks.playList);
+  const searchPlayList = useAppSelector((state) => state.tracks.searchPlaylist);
   const { track } = useAppSelector((state) => state.tracks);
+  const isSearch = useAppSelector((state) => state.tracks.isSearch);
+
+  const activeFilters = useAppSelector((state) => state.tracks.activeFilters);
+
+  useEffect(() => {
+    getTracks().then((data) => {
+      dispatcher(setPlayList(data));
+    });
+  }, [dispatcher]);
+
   const handleTrack = (trackR: trackType) => {
     dispatcher(setCurrentTrack(trackR));
-    dispatcher(setPlayList(trackList));
   };
 
-  // add a duration from audio props to each track
   const [trackDurations, setTrackDurations] = useState<{ [key: string]: number }>({});
   const audioRefs = useRef<{ [key: string]: HTMLAudioElement }>({});
   useEffect(() => {
     const durations: { [key: string]: number } = {};
-    trackList?.forEach((track: trackType) => {
+    playList?.forEach((track: trackType) => {
       const audio = new Audio(track.track_file);
       audio.addEventListener('loadedmetadata', () => {
         durations[track.id] = audio.duration;
@@ -46,21 +48,62 @@ const ContentPlaylist = () => {
         audio.load();
       });
     };
-  }, [trackList]);
+  }, [playList]);
+
+  const tracksToRender = isSearch ? searchPlayList : playList;
+
+  const filterTracks = (tracks: trackType[]) => {
+    return tracks.filter((track) => {
+      const isAuthorsMatch = activeFilters.authors.length === 0 || activeFilters.authors.includes(track.author);
+      const isGenresMatch = activeFilters.genres.length === 0 || activeFilters.genres.includes(track.genre);
+      return isAuthorsMatch && isGenresMatch;
+    });
+  };
+
+  const sortTracksByReleaseDate = (tracks: trackType[], order: string) => {
+    return tracks.sort((a, b) => {
+
+      const dateA = new Date(a.release_date).getTime();
+      const dateB = new Date(b.release_date).getTime();
+
+      switch (order) {
+        case 'сначала новые':
+          return dateB - dateA;
+        case 'сначала старые':
+          return dateA - dateB;
+        default:
+          return 0;
+      }
+    });
+  };
+
+  const filteredAndSortedPlaylist = useMemo(() => {
+    const filteredTracks = filterTracks(tracksToRender);
+
+    if (activeFilters.release_dates) {
+      return sortTracksByReleaseDate(filteredTracks, activeFilters.release_dates);
+    } else {
+      return filteredTracks;
+    }
+  }, [tracksToRender, activeFilters]);
 
   return (
     <div className={classNames(styles.contentPlaylist, styles.playlist)}>
-      {trackList?.map((trackR: trackType) => (
-        <PlayListItem
-          key={trackR.id}
-          name={trackR.name}
-          author={trackR.author}
-          album={trackR.album}
-          duration={trackDurations[trackR.id]}
-          setTrack={() => handleTrack(trackR)}
-          isSetTrack={trackR.id === track?.id}
-        />
-      ))}
+      {isSearch && tracksToRender.length === 0 ? (
+        <p className={styles.playlistTitleCol}>Треки не найдены</p>
+      ) : (
+        filteredAndSortedPlaylist.map((trackR: trackType) => (
+          <PlayListItem
+            key={trackR.id}
+            name={trackR.name}
+            author={trackR.author}
+            album={trackR.album}
+            duration={trackDurations[trackR.id]}
+            setTrack={() => handleTrack(trackR)}
+            isSetTrack={trackR.id === track?.id}
+          />
+        ))
+      )}
     </div>
   );
 };
