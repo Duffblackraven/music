@@ -465,93 +465,96 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/FilterBlockItem/FilterBlockItem.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************/
 .FilterBlockItem_filterButton__VstET {
-    color: #fff;
-    background-color: transparent;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    border: 1px solid #ffffff;
-    border-radius: 60px;
-    padding: 6px 20px;
-    transition: 0.2s;
-    width: 140px;
-  }
-  .FilterBlockItem_filterButton__VstET:hover {
-    border-color: #AD61FF;
-    color: #AD61FF;
-  }
-  .FilterBlockItem_active__fo_ro {
-    color:#AD61FF;
-    border-color: #AD61FF;
-  }
+  color: #fff;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #ffffff;
+  border-radius: 60px;
+  padding: 6px 20px;
+  transition: 0.2s;
+  width: 140px;
+}
+.FilterBlockItem_filterButton__VstET:hover {
+  border-color: #AD61FF;
+  color: #AD61FF;
+}
+/* .active {
+  color:#AD61FF;
+  border-color: #AD61FF;
+} */
 
-  .FilterBlockItem_filterBy__agniH {
-    display: block;
-    position: absolute;
-    background-color: #313131;
-    width: 220px;
-    max-height: 386px;
-    overflow-y: auto;
-    border-radius: 12px;
-    padding: 15px;
-    z-index: 7;
-    box-sizing: content-box;
-    margin-top: 15px;
-  }
-  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar {
-    width: 4px;
-    margin-left: -20px;
-  }
-  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar-thumb {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-  }
-  .FilterBlockItem_filterBy__agniH::-webkit-scrollbar-track {
-    background-color: #4B4949;
-  }
-  .FilterBlockItem_filterByP__gEZ70 {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 8px;
-    list-style-type: none;
-    cursor: pointer;
-  }
+.FilterBlockItem_filterBy__agniH {
+  display: block;
+  position: absolute;
+  background-color: #313131;
+  width: 220px;
+  max-height: 386px;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 7;
+  box-sizing: content-box;
+  margin-top: 15px;
+}
+.FilterBlockItem_filterBy__agniH::-webkit-scrollbar {
+  width: 4px;
+  margin-left: -20px;
+}
+.FilterBlockItem_filterBy__agniH::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.FilterBlockItem_filterBy__agniH::-webkit-scrollbar-track {
+  background-color: #4B4949;
+}
+.FilterBlockItem_filterByP__gEZ70 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 8px;
+  list-style-type: none;
+  cursor: pointer;
+}
+.FilterBlockItem_active__fo_ro {
+  color:#AD61FF;
+  border-color: #AD61FF;
+}
+.FilterBlockItem_CountPopUp__LJyZH {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 
-  .FilterBlockItem_CountPopUp__LJyZH {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+  position: relative;
+  top: 14px;
+  left: 115px;
 
-    position: relative;
-    top: 14px;
-    left: 115px;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #AD61FF;
+  color: #FFFFFF;
+  transition: 1s;
+}
 
-    font-size: 14px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background-color: #AD61FF;
-    color: #FFFFFF;
-    transition: 1s;
-  }
-  
-  .FilterBlockItem_artist__UEFAC {
-    top: 231px;
-    left: 514px;
-  }
-  .FilterBlockItem_year__Tl6OA {
-    top: 231px;
-    left: 652px;
-  }
-  .FilterBlockItem_genre__G_Bro {
-    top: 231px;
-    left: 744px;
-  }
+.FilterBlockItem_artist__UEFAC {
+  top: 231px;
+  left: 514px;
+}
+.FilterBlockItem_year__Tl6OA {
+  top: 231px;
+  left: 652px;
+}
+.FilterBlockItem_genre__G_Bro {
+  top: 231px;
+  left: 744px;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/FilterBlock/FilterBlock.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/

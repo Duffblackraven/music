@@ -7,6 +7,7 @@ type FilterItemProps = {
     onClick: () => void;
     isOpened: boolean;
     list: Array<string>;
+    selectedOptions: Array<string>;
     toggleSelectedOption: (value: string) => void;
 };
 
@@ -15,18 +16,11 @@ const FilterBlockItem = ({
     onClick,
     isOpened,
     list,
+    selectedOptions,
     toggleSelectedOption,
 }: FilterItemProps) => {
-
-    const [selectedValue, setSelectedValue] = useState<string | null>(null);
     const [popUpOpen, setPopUpOpen] = useState<boolean>(false);
     const filterRef = useRef<HTMLDivElement>(null);
-
-    const handleItemClick = (value: string) => {
-        setSelectedValue(value);
-        toggleSelectedOption(value);
-    };
-
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -44,6 +38,10 @@ const FilterBlockItem = ({
     const handleButtonClick = () => {
         setPopUpOpen(!popUpOpen);
         onClick();
+    };
+
+    const handleItemClick = (value: string) => {
+        toggleSelectedOption(value);
     };
 
     return (
@@ -70,7 +68,7 @@ const FilterBlockItem = ({
                                 <li
                                     key={index}
                                     className={classNames(styles.filterByP, {
-                                        [styles.active]: value === selectedValue,
+                                        [styles.active]: selectedOptions.includes(value),
                                     })}
                                     onClick={() => handleItemClick(value)}
                                 >

@@ -1,5 +1,4 @@
 "use client"
-
 import classNames from "classnames";
 import styles from "./FilterBlock.module.css";
 import React, { useMemo, useState } from 'react';
@@ -7,7 +6,8 @@ import { trackType } from '@/types/types';
 import { clearActiveFilters, setActiveFilter } from '@/store/features/tracksSlice';
 import { getUniqueValues } from "@/lib/getUniqueValues";
 import { useAppDispatch, useAppSelector } from "@/types/hooks";
-import FilterBlockItem from "../FilterBlockItem/FilterBlockItem";
+import { FilterBlockItem } from "../FilterBlockItem"; 
+
 
 const FilterBlock = () => {
   const dispatcher = useAppDispatch();
@@ -55,6 +55,7 @@ const FilterBlock = () => {
         onClick={() => setLocalActiveFilter(localActiveFilter === 'author' ? null : 'author')}
         isOpened={localActiveFilter === 'author'}
         list={memoizedGetUniqueValues}
+        selectedOptions={selectedAuthors}
         toggleSelectedOption={toggleSelectedAuthors}
       >
         исполнителю
@@ -64,6 +65,7 @@ const FilterBlock = () => {
         onClick={() => setLocalActiveFilter(localActiveFilter === 'release_date' ? null : 'release_date')}
         isOpened={localActiveFilter === 'release_date'}
         list={sortByYearValues}
+        selectedOptions={[]}
         toggleSelectedOption={toggleReleaseYearFilter}
       >
         году выпуска
@@ -73,6 +75,7 @@ const FilterBlock = () => {
         onClick={() => setLocalActiveFilter(localActiveFilter === 'genre' ? null : 'genre')}
         isOpened={localActiveFilter === 'genre'}
         list={memoizedGetUniqueValues}
+        selectedOptions={selectedGenres}
         toggleSelectedOption={toggleSelectedGenres}
       >
         жанру
