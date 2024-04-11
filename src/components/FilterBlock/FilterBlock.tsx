@@ -1,13 +1,13 @@
 "use client"
+
 import classNames from "classnames";
 import styles from "./FilterBlock.module.css";
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { trackType } from '@/types/types';
 import { clearActiveFilters, setActiveFilter } from '@/store/features/tracksSlice';
 import { getUniqueValues } from "@/lib/getUniqueValues";
 import { useAppDispatch, useAppSelector } from "@/types/hooks";
 import { FilterBlockItem } from "../FilterBlockItem"; 
-
 
 const FilterBlock = () => {
   const dispatcher = useAppDispatch();
@@ -17,28 +17,27 @@ const FilterBlock = () => {
   const [localActiveFilter, setLocalActiveFilter] = useState<keyof trackType | null>(null);
   const sortByYearValues = ["По умолчанию", "сначала новые", "сначала старые"];
 
-
-  const toggleReleaseYearFilter = (option: string) => {
+  const toggleReleaseYearFilter = useCallback((option: string) => {
     dispatcher(setActiveFilter({
       release_dates: option
     }));
-  };
+  }, [dispatcher]);
 
-  const toggleSelectedAuthors = (author: string) => {
+  const toggleSelectedAuthors = useCallback((author: string) => {
     dispatcher(setActiveFilter({
       authors: selectedAuthors.includes(author) ? selectedAuthors.filter((item) => item !== author) : [...selectedAuthors, author],
-    }))
-  };
+    }));
+  }, [dispatcher, selectedAuthors]);
 
-  const toggleSelectedGenres = (genre: string) => {
+  const toggleSelectedGenres = useCallback((genre: string) => {
     dispatcher(setActiveFilter({
       genres: selectedGenres.includes(genre) ? selectedGenres.filter((item) => item !== genre) : [...selectedGenres, genre],
-    }))
-  };
+    }));
+  }, [dispatcher, selectedGenres]);
 
-  const discardFilters = () => {
+  const discardFilters = useCallback(() => {
     dispatcher(clearActiveFilters())
-  }
+  }, [dispatcher]);
 
   const memoizedGetUniqueValues = useMemo(() => {
     if (localActiveFilter) {
@@ -81,11 +80,11 @@ const FilterBlock = () => {
         жанру
       </FilterBlockItem>
 
-      <button
+      {/* <button
         className={styles.discardButton}
-        onClick={() => discardFilters()}>
+        onClick={discardFilters}>
         сбросить фильтры
-      </button>
+      </button> */}
 
     </div>
   );

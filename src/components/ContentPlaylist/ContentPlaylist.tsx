@@ -1,8 +1,6 @@
 "use client"
 
-import styles from "./ContentPlaylist.module.css";
-import classNames from "classnames";
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { trackType } from '@/types/types';
 import { setCurrentTrack, setPlayList } from '@/store/features/tracksSlice';
 import { PlayListItem } from '@components/PlayListItem';
@@ -10,13 +8,11 @@ import { getTracks } from "@/api/api";
 import { useAppDispatch, useAppSelector } from "@/types/hooks";
 
 const ContentPlaylist = () => {
-
   const dispatcher = useAppDispatch();
   const playList = useAppSelector((state) => state.tracks.playList);
   const searchPlayList = useAppSelector((state) => state.tracks.searchPlaylist);
   const { track } = useAppSelector((state) => state.tracks);
   const isSearch = useAppSelector((state) => state.tracks.isSearch);
-
   const activeFilters = useAppSelector((state) => state.tracks.activeFilters);
 
   useEffect(() => {
@@ -52,20 +48,18 @@ const ContentPlaylist = () => {
 
   const tracksToRender = isSearch ? searchPlayList : playList;
 
-  const filterTracks = (tracks: trackType[]) => {
+  const filterTracks = useCallback((tracks: trackType[]) => {
     return tracks.filter((track) => {
       const isAuthorsMatch = activeFilters.authors.length === 0 || activeFilters.authors.includes(track.author);
       const isGenresMatch = activeFilters.genres.length === 0 || activeFilters.genres.includes(track.genre);
       return isAuthorsMatch && isGenresMatch;
     });
-  };
+  }, [activeFilters]);
 
-  const sortTracksByReleaseDate = (tracks: trackType[], order: string) => {
+  const sortTracksByReleaseDate = useCallback((tracks: trackType[], order: string) => {
     return tracks.sort((a, b) => {
-
       const dateA = new Date(a.release_date).getTime();
       const dateB = new Date(b.release_date).getTime();
-
       switch (order) {
         case 'сначала новые':
           return dateB - dateA;
@@ -75,22 +69,21 @@ const ContentPlaylist = () => {
           return 0;
       }
     });
-  };
+  }, []);
 
   const filteredAndSortedPlaylist = useMemo(() => {
     const filteredTracks = filterTracks(tracksToRender);
-
     if (activeFilters.release_dates) {
       return sortTracksByReleaseDate(filteredTracks, activeFilters.release_dates);
     } else {
       return filteredTracks;
     }
-  }, [tracksToRender, activeFilters]);
+  }, [tracksToRender, activeFilters, filterTracks, sortTracksByReleaseDate]);
 
   return (
-    <div className={classNames(styles.contentPlaylist, styles.playlist)}>
+    <div>
       {isSearch && tracksToRender.length === 0 ? (
-        <p className={styles.playlistTitleCol}>Треки не найдены</p>
+        <p>Треки не найдены</p>
       ) : (
         filteredAndSortedPlaylist.map((trackR: trackType) => (
           <PlayListItem

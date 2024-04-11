@@ -53,7 +53,7 @@ const tracksSlice = createSlice({
     initialState,
 
     reducers: {
-        // playlist
+
         setCurrentTrack: (state, action) => {
             state.track = action.payload;
             state.isPlaying = true;
@@ -61,7 +61,7 @@ const tracksSlice = createSlice({
         setPlayList: (state, action) => {
             state.playList = action.payload;
         },
-        // controls
+
         setPlay: (state) => {
             state.isPlaying = true
         },
@@ -70,7 +70,7 @@ const tracksSlice = createSlice({
         },
         setNextTrack: switchTrack(1),
         setPrevTrack: switchTrack(-1),
-        // features
+
         setShuffle: (state, action) => {
             state.isShuffle = action.payload
             if (action.payload) {
@@ -79,7 +79,7 @@ const tracksSlice = createSlice({
                 state.shufflePlayList = playList
             }
         },
-        // search bar
+
         setSearchPlayList: (state, action) => {
             state.searchPlaylist = action.payload;
         },
@@ -91,7 +91,7 @@ const tracksSlice = createSlice({
             console.log('false');
             state.isSearch = false;
         },
-        // filters
+
         setActiveFilter: (state, action: PayloadAction<{ authors?: string[], release_dates?: string, genres?: string[], searchValue?: string }>) => {
             state.activeFilters = {
                 authors: action.payload.authors || state.activeFilters.authors,
@@ -99,10 +99,7 @@ const tracksSlice = createSlice({
                 genres: action.payload.genres || state.activeFilters.genres,
                 searchValue: action.payload.searchValue || state.activeFilters.searchValue,
             };
-            // console.log('active filters:');
-            // console.log('authors: ' + state.activeFilters.authors);
-            // console.log('release_dates: ' + state.activeFilters.release_dates);
-            // console.log('genres: ' + state.activeFilters.genres);
+
             state.filteredPlaylist = state.playList.filter((track) => {
                 const isAuthors = state.activeFilters.authors.length > 0 ? state.activeFilters.authors.includes(track.author) : true;
                 const isGenres = state.activeFilters.genres.length > 0 ? state.activeFilters.genres.includes(track.genre) : true;
@@ -116,24 +113,21 @@ const tracksSlice = createSlice({
                 genres: [],
                 searchValue: "",
             };
-            // console.log('active filters:');
-            // console.log('authors: ' + state.activeFilters.authors);
-            // console.log('release_dates: ' + state.activeFilters.release_dates);
-            // console.log('genres: ' + state.activeFilters.genres);
+
         },
     }
 })
 
 export const {
-    // playlist
+
     setCurrentTrack, setPlayList,
-    // controls
+
     setPlay, setPause, setNextTrack, setPrevTrack,
-    // features
+
     setShuffle,
-    // search bat
+
     setSearchPlayList, setIsSearchTrue, setIsSearchFalse,
-    // filters
+
     setActiveFilter, clearActiveFilters
 } = tracksSlice.actions;
 export const tracksReducer = tracksSlice.reducer;

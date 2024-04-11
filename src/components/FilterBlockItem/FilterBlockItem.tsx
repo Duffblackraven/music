@@ -48,7 +48,7 @@ const FilterBlockItem = ({
         <div ref={filterRef}>
             {list.length > 0 && isOpened && (
                 <div className={styles.CountPopUp}>
-                    {list.length}
+                    {selectedOptions.length}
                 </div>
             )}
             <button
