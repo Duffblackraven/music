@@ -6,6 +6,10 @@
     background: rgba(28, 28, 28, 0.5);
   }
   
+  .displayTrue {
+    display: block;
+  }
+  
   .barContent {
     display: -webkit-box;
     display: -ms-flexbox;
