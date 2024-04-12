@@ -108,7 +108,10 @@ export default function Bar() {
         <div className={classNames(styles.bar, { [styles.displayTrue]: track })}>
           <div className={styles.barContent}>
 
-            <audio src={track?.track_file} ref={audioRef}></audio>
+            <audio src={track?.track_file} 
+            ref={audioRef}
+            onTimeUpdate={updateTime}
+            />
 
             <ProgressBar
               value={currentTime}
