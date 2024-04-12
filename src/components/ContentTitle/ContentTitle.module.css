@@ -1,0 +1,36 @@
+.contentTitle {
+    display: inline-grid;
+    grid-template-columns: [line1] 50% [line2] 20% [line3] 20% [line4] 7% [line5] 3%;     
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+    
+  .playlistTitleCol {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+  }
+  
+  .playlistTitleSvg {
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .col04 {
+    text-align: center;}

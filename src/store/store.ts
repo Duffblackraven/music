@@ -1,8 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "./features/authSlice";
-
-// import { TypedUseSelectorHook, useDispatch, useSelector, useStore } from "react-redux";
-import { tracksReducer } from "./features/playlistSlice";
+import { tracksReducer } from "./features/tracksSlice";
 
 export const makeStore = () => {
     return configureStore({
