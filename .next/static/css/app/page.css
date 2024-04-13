@@ -243,6 +243,10 @@ input[type=range].BarVolume_volumeProgressLine__YSWbA.BarVolume_slider-progress_
     background: rgba(28, 28, 28, 0.5);
   }
   
+  .Bar_displayTrue__K7En0 {
+    display: block;
+  }
+  
   .Bar_barContent___VddJ {
     display: flex;
     flex-direction: column;
