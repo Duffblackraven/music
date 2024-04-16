@@ -1,8 +1,10 @@
 const API_URL = "https://skypro-music-api.skyeng.tech/catalog/";
+const TRACK_ALL = "track/all/";
+const SELECTION = "selection/"
 
-export async function getTracks() {
+export async function getTracks(playlistNumber: number | null) {
     try {
-        const response = await fetch(API_URL + "track/all/");
+        const response = await fetch(API_URL + (playlistNumber ? SELECTION + playlistNumber : TRACK_ALL));
         if (!response.ok) {
             if (response.status === 401) {
                 throw new Error("Нет авторизации");
@@ -11,7 +13,6 @@ export async function getTracks() {
             }
         }
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (error) {
         console.warn(error);

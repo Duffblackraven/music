@@ -1,6 +1,5 @@
 import { trackType } from "@/types/types";
 
-
 export const getUniqueValues = (playList: trackType[], property: keyof trackType) => {
     return playList
         ? Array.from(new Set(playList.map((track: trackType) => track[property])))

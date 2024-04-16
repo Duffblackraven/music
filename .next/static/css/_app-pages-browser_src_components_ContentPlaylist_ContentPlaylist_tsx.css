@@ -107,3 +107,152 @@
 .PlayListItem_trackTextRight__DCj_H {
   text-align: right;
 }
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/ContentPlaylist/ContentPlaylist.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.ContentPlaylist_playlist__kH4eQ {
+    height: 700px;
+    overflow-y: auto;
+    overflow-y: hidden;
+}
+.ContentPlaylist_playlist__kH4eQ::-webkit-scrollbar {
+   display: none;
+}
+
+.ContentPlaylist_contentPlaylist__g3gEg {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .ContentPlaylist_playlistTitleCol___3R0X {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #696969;
+    text-transform: uppercase;
+  }
+  
+  .ContentPlaylist_playlistTitleSvg__xElih {
+    width: 12px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .ContentPlaylist_col01__Q0Ihz {
+    width: 447px;
+  }
+  
+  .ContentPlaylist_col02__05QoQ {
+    width: 321px;
+  }
+  
+  .ContentPlaylist_col03__2lzFc {
+    width: 245px;
+  }
+  
+  .ContentPlaylist_col04__W8bWr {
+    width: 60px;
+    text-align: end;
+  }
+  
+  .ContentPlaylist_playlistItem__2kdZd {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  .ContentPlaylist_playlistTrack__MW_nK {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ContentPlaylist_trackTitle__2kINm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 447px;
+  }
+  
+  .ContentPlaylist_trackTitleImage__br5cS {
+    width: 51px;
+    height: 51px;
+    padding: 16px;
+    background: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+  }
+  
+  .ContentPlaylist_trackTitleSvg__rDtfu {
+    width: 18px;
+    height: 17px;
+    fill: transparent;
+    stroke: #4e4e4e;
+  }
+  
+  .ContentPlaylist_trackTitleLink__nx6An {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  
+  .ContentPlaylist_trackTitleSpan__Fx9cD {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4e4e4e;
+  }
+  
+  .ContentPlaylist_trackAuthor__krdT7 {
+    width: 321px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .ContentPlaylist_trackAuthorLink__dv90E {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .ContentPlaylist_trackAlbum__KK_Mk {
+    width: 245px;
+  }
+  
+  .ContentPlaylist_trackAlbumLink__BGPaN {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #696969;
+  }
+  
+  .ContentPlaylist_trackTimeSvg__EM9vB {
+    width: 14px;
+    height: 12px;
+    margin-right: 17px;
+    fill: transparent;
+    stroke: #696969;
+  }
+  
+  .ContentPlaylist_trackTimeText__yR5m_ {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #696969;
+  }
