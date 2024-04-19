@@ -1,25 +1,34 @@
 "use client"
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import styles from "./ContentPlaylist.module.css";
+import classNames from "classnames";
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { trackType } from '@/types/types';
 import { setCurrentTrack, setPlayList } from '@/store/features/tracksSlice';
 import { PlayListItem } from '@components/PlayListItem';
-import { getTracks } from "@/api/api";
 import { useAppDispatch, useAppSelector } from "@/types/hooks";
+import { getTracks } from "@/api/api";
+import { sortTracksByReleaseDate } from "@/lib/sortTracksByReleaseDate";
 
 const ContentPlaylist = () => {
+
   const dispatcher = useAppDispatch();
   const playList = useAppSelector((state) => state.tracks.playList);
   const searchPlayList = useAppSelector((state) => state.tracks.searchPlaylist);
   const { track } = useAppSelector((state) => state.tracks);
   const isSearch = useAppSelector((state) => state.tracks.isSearch);
+
   const activeFilters = useAppSelector((state) => state.tracks.activeFilters);
 
+
+  const playlistNumber = useAppSelector((state) => state.tracks.playlistNumber);
+ 
   useEffect(() => {
-    getTracks().then((data) => {
-      dispatcher(setPlayList(data));
+    getTracks(playlistNumber).then((data) => {
+
+      data.items ? dispatcher(setPlayList(data.items)) : dispatcher(setPlayList(data));
     });
-  }, [dispatcher]);
+  }, [dispatcher, playlistNumber]);
 
   const handleTrack = (trackR: trackType) => {
     dispatcher(setCurrentTrack(trackR));
@@ -48,42 +57,29 @@ const ContentPlaylist = () => {
 
   const tracksToRender = isSearch ? searchPlayList : playList;
 
-  const filterTracks = useCallback((tracks: trackType[]) => {
+
+  const filterTracks = (tracks: trackType[]) => {
     return tracks.filter((track) => {
       const isAuthorsMatch = activeFilters.authors.length === 0 || activeFilters.authors.includes(track.author);
       const isGenresMatch = activeFilters.genres.length === 0 || activeFilters.genres.includes(track.genre);
       return isAuthorsMatch && isGenresMatch;
     });
-  }, [activeFilters]);
-
-  const sortTracksByReleaseDate = useCallback((tracks: trackType[], order: string) => {
-    return tracks.sort((a, b) => {
-      const dateA = new Date(a.release_date).getTime();
-      const dateB = new Date(b.release_date).getTime();
-      switch (order) {
-        case 'сначала новые':
-          return dateB - dateA;
-        case 'сначала старые':
-          return dateA - dateB;
-        default:
-          return 0;
-      }
-    });
-  }, []);
+  };
 
   const filteredAndSortedPlaylist = useMemo(() => {
     const filteredTracks = filterTracks(tracksToRender);
+
     if (activeFilters.release_dates) {
       return sortTracksByReleaseDate(filteredTracks, activeFilters.release_dates);
     } else {
       return filteredTracks;
     }
-  }, [tracksToRender, activeFilters, filterTracks, sortTracksByReleaseDate]);
+  }, [tracksToRender, activeFilters]);
 
   return (
-    <div>
+    <div className={classNames(styles.contentPlaylist, styles.playlist)}>
       {isSearch && tracksToRender.length === 0 ? (
-        <p>Треки не найдены</p>
+        <p className={styles.playlistTitleCol}>No tracks found</p>
       ) : (
         filteredAndSortedPlaylist.map((trackR: trackType) => (
           <PlayListItem

@@ -4,13 +4,19 @@ import { CenterBlock } from "@/components/CenterBlock";
 import { MainSlideBar } from "@components/MainSlideBar";
 import { Bar } from "@components/Bar";
 
-export default function Main() {
+type mainType = {
+  playlistID: string,
+  isFilter?: boolean,
+  isSideBar?: boolean,
+};
+
+export default function Main({ playlistID, isFilter = true, isSideBar = true }: mainType) {
   return (
     <>
       <main className={styles.main}>
         <Nav />
-        <CenterBlock />
-        <MainSlideBar />
+        <CenterBlock playlistID={playlistID} isFilter={isFilter} />
+        <MainSlideBar isSideBar={isSideBar} />
       </main>
       <Bar />
       <footer className="footer"></footer>

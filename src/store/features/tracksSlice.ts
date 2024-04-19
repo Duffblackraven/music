@@ -7,15 +7,20 @@ type TracksStateType = {
     isPlaying: boolean,
     isShuffle: boolean,
     shufflePlayList: trackType[],
+
     searchPlaylist: trackType[],
     isSearch: boolean,
+
     filteredPlaylist: trackType[],
+
     activeFilters: {
         authors: Array<string>,
         release_dates: null | string,
         genres: Array<string>,
-        searchValue: string
-    }
+        searchValue: string,
+    },
+
+    playlistNumber: number | null,
 };
 
 const initialState: TracksStateType = {
@@ -24,15 +29,20 @@ const initialState: TracksStateType = {
     isPlaying: false,
     isShuffle: false,
     shufflePlayList: [],
+
     searchPlaylist: [],
     isSearch: false,
+
     filteredPlaylist: [],
+
     activeFilters: {
         authors: [],
         release_dates: "default",
         genres: [],
-        searchValue: ""
-    }
+        searchValue: "",
+    },
+
+    playlistNumber: null,
 };
 
 const switchTrack = (direction: number) => {
@@ -115,6 +125,10 @@ const tracksSlice = createSlice({
             };
 
         },
+        setPlaylistNumber: (state, action) => {
+            state.playlistNumber = action.payload;
+        
+        },
     }
 })
 
@@ -127,7 +141,9 @@ export const {
     setShuffle,
 
     setSearchPlayList, setIsSearchTrue, setIsSearchFalse,
+ 
+    setActiveFilter, clearActiveFilters,
 
-    setActiveFilter, clearActiveFilters
+    setPlaylistNumber,
 } = tracksSlice.actions;
 export const tracksReducer = tracksSlice.reducer;

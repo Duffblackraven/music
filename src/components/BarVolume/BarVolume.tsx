@@ -35,6 +35,7 @@ export default function BarVolume({ handleVolume }: BarVolumeProps) {
             max={100}
             onChange={onChange}
             step={1}
+            data-testid="volume-bar"
           />
         </div>
       </div>
