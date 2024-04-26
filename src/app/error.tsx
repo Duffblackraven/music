@@ -16,7 +16,7 @@ export default function Error({ error, reset }: ErrorProps) {
     return (
         <div className={styles.container}>
             <div className={styles.containerNf}>
-                <h1 className={styles.containerH1}>:(</h1>
+                <h1 className={styles.containerH1}>404</h1>
                 <h3 className={styles.containerH3}>
                 Ошибка загрузки страницы
                 </h3>

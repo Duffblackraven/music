@@ -14,6 +14,7 @@ import {
   setShuffle
 }
   from "@/store/features/tracksSlice";
+import { addTrackToPlaylist, removeTrackFromPlaylist } from "@/api/api";
 
 export default function Bar() {
 
@@ -102,15 +103,32 @@ export default function Bar() {
     }
   };
 
+  const [isLiked, setIsLiked] = useState(false);
+  const handleLikeTrack = async (id: number) => {
+    setIsLiked(prevState => !prevState);
+
+    try {
+      if (!isLiked) {
+        await addTrackToPlaylist(id);
+
+      } else {
+        await removeTrackFromPlaylist(id);
+
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       {track && (
         <div className={classNames(styles.bar, { [styles.displayTrue]: track })}>
           <div className={styles.barContent}>
 
-            <audio src={track?.track_file} 
-            ref={audioRef}
-            onTimeUpdate={updateTime}
+            <audio src={track?.track_file}
+              ref={audioRef}
+              onTimeUpdate={updateTime}
             />
 
             <ProgressBar
@@ -203,9 +221,14 @@ export default function Bar() {
                 <div className={styles.trackPlayLikeDis}>
                   <div
                     className={classNames(styles.trackPlayLike, styles._btnIcon)}
+                    onClick={() => handleLikeTrack(track.id)} 
                   >
                     <svg className={styles.trackPlayLikeSvg}>
-                      <use href="/img/icon/sprite.svg#icon-like"></use>
+                      {isLiked ? (
+                        <use href="/img/icon/sprite.svg#icon-liked"></use>
+                      ) : (
+                        <use href="/img/icon/sprite.svg#icon-like"></use>
+                      )}
                     </svg>
                   </div>
                   <div

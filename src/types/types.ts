@@ -9,6 +9,7 @@ export type trackType = {
     logo: string | null;
     track_file: string;
     stared_user: Array<userType> | null;
+    playlistID?: string;
 };
 
 export type userType = {
