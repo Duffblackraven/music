@@ -94,11 +94,9 @@ const tracksSlice = createSlice({
             state.searchPlaylist = action.payload;
         },
         setIsSearchTrue: (state) => {
-            console.log('true');
             state.isSearch = true;
         },
         setIsSearchFalse: (state) => {
-            console.log('false');
             state.isSearch = false;
         },
 
@@ -109,7 +107,6 @@ const tracksSlice = createSlice({
                 genres: action.payload.genres || state.activeFilters.genres,
                 searchValue: action.payload.searchValue || state.activeFilters.searchValue,
             };
-
             state.filteredPlaylist = state.playList.filter((track) => {
                 const isAuthors = state.activeFilters.authors.length > 0 ? state.activeFilters.authors.includes(track.author) : true;
                 const isGenres = state.activeFilters.genres.length > 0 ? state.activeFilters.genres.includes(track.genre) : true;
@@ -123,11 +120,9 @@ const tracksSlice = createSlice({
                 genres: [],
                 searchValue: "",
             };
-
         },
         setPlaylistNumber: (state, action) => {
             state.playlistNumber = action.payload;
-        
         },
     }
 })
@@ -141,7 +136,7 @@ export const {
     setShuffle,
 
     setSearchPlayList, setIsSearchTrue, setIsSearchFalse,
- 
+
     setActiveFilter, clearActiveFilters,
 
     setPlaylistNumber,

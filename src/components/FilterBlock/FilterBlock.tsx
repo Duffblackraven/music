@@ -79,13 +79,6 @@ const FilterBlock = () => {
       >
         жанру
       </FilterBlockItem>
-
-      {/* <button
-        className={styles.discardButton}
-        onClick={discardFilters}>
-        сбросить фильтры
-      </button> */}
-
     </div>
   );
 };
